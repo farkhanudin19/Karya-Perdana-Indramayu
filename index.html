@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karya Perdana Indramayu - Dealer Resmi Motor Honda</title>
+    <!-- Font Inter & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN untuk grid & utilitas fleksibel -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root {
+            --primary-color: #E60012;      
+            --primary-hover: #CC0010;      
+            --secondary-color: #1A1A1A;    
+            --accent-color: #0072CE;       
+            --whatsapp-color: #25D366;     
+            --whatsapp-hover: #128C7E;     
+            --bg-light: #F8F9FA;           
+            --bg-card: #FFFFFF;            
+            --text-muted: #6C757D;         
+            --border-color: #E5E7EB;       
+            --font-main: 'Inter', sans-serif;
+            --border-radius: 12px;         
+            --transition: all 0.3s ease;   
+            --container-max-width: 1200px; 
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-main);
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--secondary-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            color: var(--secondary-color);
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-top: 8px;
+        }
+
+        /* HEADER & NAVIGATION BAR */
+        header {
+            background-color: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 75px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+        }
+
+        .logo img {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-dealer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 18px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-dealer:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* HERO BANNER */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #111111 0%, #2a2a2a 100%);
+            color: white;
+            padding: 80px 0;
+            overflow: hidden;
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(230, 0, 18, 0.2);
+            color: #FF4D4D;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(230, 0, 18, 0.4);
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            color: #CCCCCC;
+            font-size: 1.05rem;
+            margin-bottom: 30px;
+            max-width: 90%;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 14px 28px;
+            border-radius: var(--border-radius);
+            font-weight: 700;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(230, 0, 18, 0.3);
+        }
+
+        .btn-outline {
+            border: 2px solid #FFFFFF;
+            color: white;
+            padding: 12px 26px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--secondary-color);
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: var(--border-radius);
+            margin: 0 auto;
+            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.5));
+        }
+
+        /* PRODUCTS SECTION */
+        .products-section {
+            padding: 80px 0;
+        }
+
+        /* SIMULASI KREDIT */
+        .calculator-section {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            margin-top: 60px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .calc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .calc-form-group {
+            margin-bottom: 20px;
+        }
+
+        .calc-form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .calc-form-group select, .calc-form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .calc-form-group select:focus, .calc-form-group input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .calc-result-box {
+            background-color: var(--bg-light);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .calc-result-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .calc-result-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .calc-result-item span:last-child {
+            font-weight: 700;
+            color: var(--secondary-color);
+        }
+
+        .calc-total {
+            font-size: 1.25rem !important;
+            color: var(--primary-color) !important;
+            border-top: 1px solid var(--border-color);
+            padding-top: 12px;
+            margin-top: 5px;
+        }
+
+        .btn-wa {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: var(--whatsapp-color);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .btn-wa:hover {
+            background-color: var(--whatsapp-hover);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        /* TEKNOLOGI HONDA */
+        .tech-section {
+            background-color: #111;
+            color: white;
+            padding: 80px 0;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .tech-card {
+            background-color: #1E1E1E;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border: 1px solid #333;
+            transition: var(--transition);
+        }
+
+        .tech-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        .tech-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(230, 0, 18, 0.1);
+            color: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .tech-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .tech-card p {
+            color: #A0A0A0;
+            font-size: 0.92rem;
+        }
+
+        /* BERITA & PROMO */
+        .news-section {
+            padding: 80px 0;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .news-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .news-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .news-img {
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .news-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .news-card:hover .news-img img {
+            transform: scale(1.08);
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-date {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .news-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .news-excerpt {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .news-link {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 60px 0 20px 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #AAA;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .social-icon {
+            width: 38px;
+            height: 38px;
+            background-color: #2A2A2A;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 868px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-text p {
+                margin: 0 auto 30px auto;
+            }
+            .hero-btns {
+                justify-content: center;
+            }
+            .nav-menu {
+                position: fixed;
+                top: 75px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 75px);
+                background-color: white;
+                flex-direction: column;
+                justify-content: center;
+                transition: var(--transition);
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            }
+            .nav-menu.active {
+                left: 0;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER & NAVBAR -->
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Logo Karya Perdana Indramayu" class="h-10 w-auto">
+                <span>KARYA PERDANA INDRAMAYU</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Beranda</a></li>
+                <li><a href="#products" class="nav-link">Katalog Produk</a></li>
+                <li><a href="#calculator" class="nav-link">Simulasi Kredit</a></li>
+                <li><a href="#technology" class="nav-link">Teknologi</a></li>
+                <li><a href="#news" class="nav-link">Berita & Promo</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="https://wa.me/6287717988654?text=Halo%20Karya%20Perdana%20Indramayu,%20saya%20ingin%20bertanya%20mengenai%20unit%20motor" target="_blank" class="btn-dealer">
+                    <i class="fa-brands fa-whatsapp"></i> Hubungi Kami
+                </a>
+                <div class="hamburger" id="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <span class="hero-badge">Dealer Resmi Honda Indramayu</span>
+                <h1>KARYA PERDANA MOTOR INDRAMAYU</h1>
+                <p>Melayani Pembelian Sepeda Motor Honda Secara Cash, Kredit, Musiman dan Bunga Menurun dengan pilihan unit terlengkap.</p>
+                <p>Beralamat di Jl. Jend. Sudirman No.153-155, Lemahmekar, Kec. Indramayu, Kabupaten Indramayu, Jawa Barat 45213.</p>
+                <div class="hero-btns">
+                    <a href="#products" class="btn-primary">
+                        Lihat Katalog <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="https://www.google.com/maps/place/Dealer+Motor+Honda+Karya+Perdana/@-6.3365323,108.3311123,17z/data=!4m21!1m14!4m13!1m4!2m2!1d108.3351778!2d-6.336617!4e1!1m6!1m2!1s0x2e6ebead066eabab:0x7a1eacba4d019233!2sDealer+Motor+Honda+Karya+Perdana,+Jl.+Jend.+Sudirman+No.153-155,+Lemahmekar,+Kec.+Indramayu,+Kabupaten+Indramayu,+Jawa+Barat+45213!2m2!1d108.3352325!2d-6.336532!3e9!3m5!1s0x2e6ebead066eabab:0x7a1eacba4d019233!8m2!3d-6.336532!4d108.3352325!16s%2Fg%2F11c566bvf9?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-outline">Kunjungi Kami</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="Dealer.jpg" alt="Dealer Karya Perdana Indramayu">
+            </div>
+        </div>
+    </section>
+
+    <!-- KATALOG PRODUK DINAMIS -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Katalog Sepeda Motor</h2>
+                <p>Pilih motor impian Anda (Matic, Sport, CUB, dan EV).</p>
+            </div>
+
+            <!-- Kolom Pencarian Instan -->
+            <div class="max-w-md mx-auto mb-8">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" id="searchInput" placeholder="Cari nama atau tipe motor..." 
+                        class="w-full pl-11 pr-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 shadow-sm bg-white text-sm">
+                </div>
+            </div>
+
+            <!-- Tombol Filter Kategori -->
+            <div class="flex flex-wrap gap-2 justify-center mb-10" id="categoryFilters">
+                <button data-category="All" class="filter-btn active px-5 py-2.5 rounded-full font-medium text-sm transition bg-red-600 text-white">Semua</button>
+                <button data-category="Matic" class="filter-btn px-5 py-2.5 rounded-full font-medium text-sm transition bg-white text-gray-600 border border-gray-200">Matic</button>
+                <button data-category="Sport" class="filter-btn px-5 py-2.5 rounded-full font-medium text-sm transition bg-white text-gray-600 border border-gray-200">Sport</button>
+                <button data-category="CUB" class="filter-btn px-5 py-2.5 rounded-full font-medium text-sm transition bg-white text-gray-600 border border-gray-200">CUB</button>
+                <button data-category="EV" class="filter-btn px-5 py-2.5 rounded-full font-medium text-sm transition bg-white text-gray-600 border border-gray-200">EV / Listrik</button>
+            </div>
+
+            <!-- Grid Produk -->
+            <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Produk dimuat secara dinamis melalui JavaScript -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="hidden text-center py-16">
+                <i class="fa-solid fa-face-question text-4xl text-gray-400 mb-3"></i>
+                <p class="text-lg text-gray-500 font-medium">Motor yang Anda cari tidak ditemukan.</p>
+            </div>
+
+            <!-- SIMULASI KREDIT INTERAKTIF -->
+            <div class="calculator-section" id="calculator">
+                <div class="section-title" style="margin-bottom: 25px;">
+                    <h2>Simulasi Kredit Motor</h2>
+                    <p>Hitung estimasi cicilan fleksibel sesuai kebutuhan Anda</p>
+                </div>
+                <div class="calc-grid">
+                    <div>
+                        <div class="calc-form-group">
+                            <label for="selectMotor">Pilih Model Motor</label>
+                            <select id="selectMotor" onchange="hitungKredit()">
+                                <option value="19725000">BeAT SPORTY CBS </option>
+                                <option value="20775000">BeAT SPORTY CBS ISS</option>
+                                <option value="21350000">BeAT SPORTY DELUXE SMART KEY</option>
+                                <option value="20900000">BeAT STREET</option>
+                                <option value="21200000">GENIO CBS</option>
+                                <option value="21625000">GENIO CBS ISS</option>
+                                <option value="24025000">SCOOPY FASHION</option>
+                                <option value="24825000">SCOOPY PRESTIGE & STYLISH</option>
+                                <option value="25200000">VARIO 125 CBS</option>
+                                <option value="27075000">VARIO 125 CBS ISS</option>
+                                <option value="27500000">VARIO 125 STREET</option>
+                                <option value="30100000">STYLO 160 CBS</option>
+                                <option value="33075000">STYLO 160 ABS</option>
+                                <option value="34850000">STYLO 160 ABS SE</option>
+                                <option value="28850000">VARIO EVO 160 CBS</option>
+                                <option value="29100000">VARIO EVO 160 CBS NITRO</option>
+                                <option value="31875000">VARIO EVO 160 ABS</option>
+                                <option value="34450000">PCX 160 CBS</option>
+                                <option value="37975000">PCX 160 ABS</option>
+                                <option value="41300000">PCX 160 ABS ROADSYNC</option>
+                                <option value="37500000">ADV 160 CBS</option>
+                                <option value="40550000">ADV 160 ABS</option>
+                                <option value="42150000">ADV 160 ABS ROADSYNC</option>
+                                <option value="18300000">REVO FIT</option>
+                                <option value="20025000">REVO X</option>
+                                <option value="22650000">SUPRA X 125 CW</option>
+                                <option value="27575000">GTR150 SPORTY</option>
+                                <option value="27700000">GTR150 EXCLUSIVE</option>
+                                <option value="38575000">CRF150L</option>
+                                <option value="38800000">CBR150R STD </option>
+                                <option value="42925000">CBR150R ABS</option>
+                                <option value="25275000">CB 150 VERZA CW</option>
+                                <option value="34375000">CB150R STD</option>
+                                <option value="35400000">CB150R SE</option>
+                                <option value="34825000">CB150X STD</option>
+                                <option value="35325000">CB150X SE</option>
+                                <option value="28425000">SONIC STD</option>
+                                <option value="28825000">SONIC SE</option>
+                                <option value="40075000">EM1 e:</option>
+                                <option value="28075000">ICON e:</option>
+                                <option value="54550000">CUV e:</option>
+                            </select>
+                        </div>
+                        <div class="calc-form-group">
+                            <label for="selectDP">Uang Muka (DP)</label>
+                            <select id="selectDP" onchange="hitungKredit()">
+                                <option value="0.15">15%</option>
+                                <option value="0.20" selected>20%</option>
+                                <option value="0.30">30%</option>
+                                <option value="0.40">40%</option>
+                            </select>
+                        </div>
+                        <div class="calc-form-group">
+                            <label for="selectTenor">Jangka Waktu (Tenor)</label>
+                            <select id="selectTenor" onchange="hitungKredit()">
+                                <option value="12">12 Bulan (1 Tahun)</option>
+                                <option value="24" selected>24 Bulan (2 Tahun)</option>
+                                <option value="36">36 Bulan (3 Tahun)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="calc-result-box">
+                        <div class="calc-result-title">Hasil Estimasi Kredit</div>
+                        <div class="calc-result-item">
+                            <span>Harga OTR:</span>
+                            <span id="resHarga">Rp 0</span>
+                        </div>
+                        <div class="calc-result-item">
+                            <span>Estimasi DP:</span>
+                            <span id="resDP">Rp 0</span>
+                        </div>
+                        <div class="calc-result-item">
+                            <span>Tenor:</span>
+                            <span id="resTenor">0 Bulan</span>
+                        </div>
+                        <div class="calc-result-item calc-total">
+                            <span>Cicilan / Bulan:</span>
+                            <span id="resCicilan">Rp 0</span>
+                        </div>
+                        <a href="#" id="btnAjukanKredit" target="_blank" class="btn-wa" style="margin-top: 20px;">
+                            <i class="fa-brands fa-whatsapp"></i> Ajukan Kredit Ini via WA
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEKNOLOGI HONDA -->
+    <section class="tech-section" id="technology">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Teknologi Honda</h2>
+                <p style="color: #888;">Inovasi masa depan untuk keselamatan, kenyamanan, dan performa tinggi</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                    <h3>eSP+ Engine</h3>
+                    <p>Mesin generasi terbaru yang bertenaga, hemat bahan bakar, serta ramah lingkungan.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon"><i class="fa-solid fa-key"></i></div>
+                    <h3>Honda Smart Key</h3>
+                    <p>Sistem kunci canggih tanpa anak kunci (Keyless) dilengkapi fitur Anti-Theft Alarm.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>HSTC (Traction Control)</h3>
+                    <p>Mencegah ban belakang selip saat berakselerasi di jalan licin.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Honda Mobile Power Pack</h3>
+                    <p>Baterai listrik terintegrasi yang mudah ditukar untuk kenyamanan mobilitas harian.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BERITA & PROMO -->
+    <section class="news-section" id="news">
+        <div class="container">
+            <div class="section-title">
+                <h2>Berita & Promo Indramayu</h2>
+                <p>Dapatkan informasi terbaru seputar promo, acara komunitas, dan syarat kredit</p>
+            </div>
+
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-img">
+                        <img src="KSP.png" alt="Promo Kredit">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date"><i class="fa-regular fa-calendar"></i> Promo Spesial</span>
+                        <h3 class="news-title">Program Kredit Musiman & Bunga Menurun Indramayu</h3>
+                        <p class="news-excerpt">Kemudahan angsuran khusus bagi petani dan wirausaha di wilayah Indramayu...</p>
+                        <a href="https://wa.me/6287717988654?text=Halo,%20saya%20ingin%20tanya%20mengenai%20Promo%20Kredit%20Musiman" target="_blank" class="news-link">Tanya Syarat Kredit <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-img">
+                        <img src="https://www.dayaauto.co.id/wp-content/themes/daya.2.0/img/3hp-new.webp" alt="Servis AHASS">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date"><i class="fa-regular fa-calendar"></i> Layanan Purna Jual</span>
+                        <h3 class="news-title">Aplikasi Yang #BIKINGAMPANG Urusan Sepeda Motor Honda</h3>
+                        <p class="news-excerpt">Kamu bisa booking untuk servis di bengkel ataupun servis di rumah* Periode booking servis adalah hari H (minimal booking 2 jam sebelum service) hingga booking untuk 90 hari kedepan. *S&K Berlaku Pastikan kamu sudah mendaftarkan/melakukan registrasi motor.</p>
+                        <a href="https://jaringan.dayaauto.co.id/ref/?s=app&REFERRAL=0G1820246" target="_blank" class="news-link">Download Sekarang <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-img">
+                        <img src="https://asset.astra-honda.com/uploads/community/img/event//honda-bikers-day-nasional-2026-6a9823d2b5a133e6210fd3f4-02092026-012539.png" alt="Safety Riding">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-date"><i class="fa-regular fa-calendar"></i> Honda Comunnity</span>
+                        <h3 class="news-title">Honda Bikers Day Jawa 2026</h3>
+                        <p class="news-excerpt">24 Oktober 2026 - 24 Oktober 2026 Lapangan Panglima Besar Jenderal Sudirman Ambarawa, Jawa Tengah....</p>
+                        <a href="https://www.astra-honda.com/community/event/honda-bikers-day-jawa-2026" target="_blank" class="news-link">Baca Selengkapnya <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Karya Perdana Indramayu</h4>
+                    <p style="color: #AAA; font-size: 0.9rem; margin-bottom: 15px;">Dealer Resmi Motor Honda di Indramayu yang melayani pembelian Cash, Kredit, Musiman, dan Bunga Menurun.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/KaryaPerdanaIm" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/karyaperdanaindramayu/?hl=id" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@KaryaPerdanaIndramayu" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Kategori Produk</h4>
+                    <ul>
+                        <li><a href="#products">Matic Series</a></li>
+                        <li><a href="#products">Sport Series</a></li>
+                        <li><a href="#products">Cub / Bebek</a></li>
+                        <li><a href="#products">EV Electric</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Layanan Pembelian</h4>
+                    <ul>
+                        <li><a href="https://wa.me/6287717988654?text=Syarat%20Kredit" target="_blank">Simulasi & Syarat Kredit</a></li>
+                        <li><a href="https://wa.me/6287717988654?text=Info%20Kredit%20Musiman" target="_blank">Program Kredit Musiman</a></li>
+                        <li><a href="https://wa.me/6287727040055?text=Layanan%20AHASS" target="_blank">Layanan Servis AHASS</a></li>
+                        <li><a href="https://wa.me/6287711802361?text=Honda%20Genuine%20Parts" target="_blank">Honda Genuine Parts</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Layanan Kontak</h4>
+                    <p style="color: #AAA; font-size: 0.9rem;"><i class="fa-brands fa-whatsapp" style="color: var(--whatsapp-color);"></i> WhatsApp: 0877-1798-8654</p>
+                    <p style="color: #AAA; font-size: 0.9rem; margin-top: 8px;"><i class="fa-solid fa-envelope" style="color: var(--primary-color);"></i> farkhanudin.9@gmail.com</p>
+                    <p style="color: #AAA; font-size: 0.9rem; margin-top: 8px;"><i class="fa-solid fa-location-dot" style="color: var(--primary-color);"></i> Indramayu, Jawa Barat</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Karya Perdana Indramayu. Hak Cipta Dilindungi Undang-Undang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC & DATA KATALOG -->
+    <script>
+        // =========================================================================
+        // DATA PRODUK MANUAL (Sekarang 'images' menggunakan Array untuk banyak gambar)
+        // =========================================================================
+        const rawProducts = [
+            // Contoh Kategori Matic (Memiliki lebih dari 1 gambar)
+            { 
+                id: 'm-1', 
+                name: 'Honda BeAT Sporty CBS', 
+                category: 'Matic', 
+                price: 'Rp 19.725.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/08-3-26062026-031231.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/07-4-26062026-031228.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/06-5-26062026-031221.png'
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-2', 
+                name: 'Honda BeAT Sporty CBS-ISS', 
+                category: 'Matic', 
+                price: 'Rp 20.775.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/04-9-26062026-031215.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/05-8-26062026-031218.png',
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-3', 
+                name: 'BeAT SPORTY DELUXE SMART KEY', 
+                category: 'Matic', 
+                price: 'Rp 21.350.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/01-9-26062026-031206.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/02-11-26062026-031210.png',                   
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/03-10-26062026-031212.png',
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-4', 
+                name: 'BeAT STREET', 
+                category: 'Matic', 
+                price: 'Rp 20.900.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-3-1-1-30062026-033754.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-2-3-26062026-063605.png',                   
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-1-3-26062026-063608.png',
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.'
+            },
+            { 
+                id: 'm-5', 
+                name: 'GENIO CBS ISS', 
+                category: 'Matic', 
+                price: 'Rp 21.625.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504px-brown-21052026-111932.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504px-green-21052026-111936.png',                   
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504px-black-21052026-111941.png',
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-6', 
+                name: 'GENIO CBS', 
+                category: 'Matic', 
+                price: 'Rp 21.400.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/07-varian-warna-04-29102025-031844.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/07-varian-warna-05-29102025-031847.png',                   
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },                        
+            { 
+                id: 'm-7', 
+                name: 'GENIO CBS', 
+                category: 'Matic', 
+                price: 'Rp 21.200.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/07-varian-warna-06-29102025-031849.png',
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-8', 
+                name: 'VARIO EVO 160 CBS', 
+                category: 'Matic', 
+                price: 'Rp 28.850.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-cbs-glossy-blue-lime-515x504px-24062026-030706.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-cbs-glossy-white-red-515x504px-24062026-030702.png',                   
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-9', 
+                name: 'VARIO EVO 160 CBS NITRO', 
+                category: 'Matic', 
+                price: 'Rp 29.100.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-cbs-nitro-glossy-grey-lime-515x504px-24062026-030651.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-cbs-nitro-matte-black-red-515x504px-24062026-030655.png',                   
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-10', 
+                name: 'VARIO EVO 160 ABS', 
+                category: 'Matic', 
+                price: 'Rp 31.875.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-abs-ultimate-glossy-purple-515x504px-24062026-030628.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-abs-ultimate-matte-red-515x504px-24062026-030637.png',                   
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-abs-ultimate-matte-white-515x504px-24062026-030640.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-abs-ultimate-matte-black-515x504px-24062026-030644.png',
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-11', 
+                name: 'SCOOPY FASHION', 
+                category: 'Matic', 
+                price: 'Rp 24.025.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-04-13112025-031214.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-05-13112025-031217.png',                   
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-06-13112025-031220.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-07-13112025-031223.png',
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-12', 
+                name: 'SCOOPY PRESTIGE', 
+                category: 'Matic', 
+                price: 'Rp 24.825.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-08-13112025-031225.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-09-13112025-031228.png',                   
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-10-13112025-031231.png',
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-13', 
+                name: 'SCOOPY STYLISH', 
+                category: 'Matic', 
+                price: 'Rp 24.825.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-01-13112025-031205.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-02-13112025-031208.png',                   
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-03-13112025-031211.png',
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-14', 
+                name: 'VARIO 125 CBS', 
+                category: 'Matic', 
+                price: 'Rp 25.200.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-7-1-05122025-010956.jpg',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-8-1-05122025-010958.jpg',                   
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-9-1-05122025-011001.jpg',
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-15', 
+                name: 'VARIO 125 CBS ISS', 
+                category: 'Matic', 
+                price: 'Rp 27.075.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-4-1-05122025-010949.jpg',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-5-1-05122025-010951.jpg',                   
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-6-1-05122025-010953.jpg',
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-16', 
+                name: 'VARIO 125 STREET', 
+                category: 'Matic', 
+                price: 'Rp 27.500.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-1-9-08122025-120222.jpg',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-2-6-08122025-120224.jpg',                   
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-3-2-08122025-120226.jpg',
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-17', 
+                name: 'STYLO 160 CBS', 
+                category: 'Matic', 
+                price: 'Rp 30.100.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/variant-warna-masterr-ok-glam-grey-23092026-022309.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/variant-warna-masterr-05-02042026-044637.png',                   
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/variant-warna-masterr-06-02042026-044640.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/variant-warna-masterr-07-02042026-044644.png', 
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-18', 
+                name: 'STYLO 160 ABS', 
+                category: 'Matic', 
+                price: 'Rp 33.075.000', 
+               images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/variant-warna-masterr-ok-violet-23092026-022315.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/variant-warna-masterr-02-02042026-044630.png',                   
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/variant-warna-masterr-03-02042026-044632.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/variant-warna-masterr-04-02042026-044635.png', 
+                ],  
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-19', 
+                name: 'STYLO 160 ABS (SPECIAL EDITION)', 
+                category: 'Matic', 
+                price: 'Rp 34.850.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/variant-warna-masterr-01-02042026-044627.png',
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-20', 
+                name: 'PCX 160 CBS', 
+                category: 'Matic', 
+                price: 'Rp 34.450.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-08-3-11022026-055553.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-05-3-11022026-055545.png',                   
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-06-3-11022026-055548.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-07-3-11022026-055551.png', 
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-21', 
+                name: 'PCX 160 ABS', 
+                category: 'Matic', 
+                price: 'Rp 37.975.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-01-2-11022026-055530.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-02-2-11022026-055532.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-04-2-11022026-055538.png',                    
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-03-2-11022026-055535.png',
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-22', 
+                name: 'PCX 160 ABS ROADSYNC', 
+                category: 'Matic', 
+                price: 'Rp 41.300.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-09-3-11022026-060041.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-515x504-10-3-11022026-060043.png',                   
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-23', 
+                name: 'ADV 160 CBS', 
+                category: 'Matic', 
+                price: 'Rp 37.500.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/3-42-08092025-031443.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/2-61-08092025-031447.png',                   
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/1-67-08092025-031450.png',
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-24', 
+                name: 'ADV 160 ABS', 
+                category: 'Matic', 
+                price: 'Rp 40.550.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/6-rev-08092025-031405.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/5-42-08092025-031413.png',                   
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/4-42-08092025-031430.png',
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+            { 
+                id: 'm-25', 
+                name: 'ADV 160 ABS ROADSYNC', 
+                category: 'Matic', 
+                price: 'Rp 42.150.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/7-26-08092025-031359.png',
+                ], 
+                desc: 'Skuter matic terlaris yang irit bahan bakar dan lincah di perkotaan.' 
+            },
+
+            // Contoh Kategori Sport
+            { 
+                id: 's-1', 
+                name: 'CRF150L', 
+                category: 'Sport', 
+                price: 'Rp 38.575.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-crf-150l-5mb-extreme-red-28072025-111507.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-crf-150l-5mb-extreme-white-28072025-111513.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-crf-150l-5mb-extreme-black-28072025-111522.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-warna-crf-150l-5mb-extreme-green-28072025-111533.png',
+                ], 
+                desc: 'Motor sport full fairing dengan fitur konektivitas canggih.' 
+            },
+            { 
+                id: 's-2', 
+                name: 'CB 150 VERZA', 
+                category: 'Sport', 
+                price: 'Rp 25.275.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/verza-varian-warna-515x504px-bold-red-1-24042025-082818.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/verza-varian-warna-515x504px-macho-matte-black-1-24042025-082822.png',
+                ], 
+                desc: 'Performa sport tangguh dengan handling aerodinamis.' 
+            },
+            { 
+                id: 's-3', 
+                name: 'CB150R SE', 
+                category: 'Sport', 
+                price: 'Rp 35.400.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product/colors/variant-5-7-07052021-090322.jpg',
+                    'https://imagewebsite.astra-honda.com/uploads/product/colors/variant-1-7-07052021-090326.jpg',
+                    'https://imagewebsite.astra-honda.com/uploads/product/colors/variant-3-7-07052021-090331.jpg',
+                ], 
+                desc: 'Motor sport full fairing dengan fitur konektivitas canggih.' 
+            },
+            { 
+                id: 's-4', 
+                name: 'CB150R STD', 
+                category: 'Sport', 
+                price: 'Rp 34.375.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product/colors/variant-4-8-07052021-090335.jpg',
+                    'https://imagewebsite.astra-honda.com/uploads/product/colors/variant-2-9-07052021-090338.jpg',
+                ], 
+                desc: 'Motor sport full fairing dengan fitur konektivitas canggih.' 
+            },
+            { 
+                id: 's-5', 
+                name: 'CB150X SE', 
+                category: 'Sport', 
+                price: 'Rp 35.325.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/advance-black-2-1-24012024-050512.jpg',
+                ], 
+                desc: 'Motor sport full fairing dengan fitur konektivitas canggih.' 
+            },
+            { 
+                id: 's-6', 
+                name: 'CB150X STD', 
+                category: 'Sport', 
+                price: 'Rp 34.825.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/fa-ahm-sport-mid-variant-warna-matte-brown-515x504pxl-ys-7-24012024-042143.jpg',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/fa-ahm-sport-mid-variant-warna-matte-green-515x504pxl-ys-5-24012024-042203.jpg',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/mandala-red-1-1-24012024-045938.jpg',
+                ], 
+                desc: 'Motor sport full fairing dengan fitur konektivitas canggih.' 
+            },
+            { 
+                id: 's-7', 
+                name: 'SONIC STD', 
+                category: 'Sport', 
+                price: 'Rp 28.425.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product/colors/new-energetic-red-1-16042021-014724.jpg',
+                    'https://imagewebsite.astra-honda.com/uploads/product/colors/new-activo-black-1-16042021-014727.jpg',
+                ], 
+                desc: 'Motor sport full fairing dengan fitur konektivitas canggih.' 
+            },
+            { 
+                id: 's-8', 
+                name: 'SONIC SE', 
+                category: 'Sport', 
+                price: 'Rp 28.825.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product/colors/new-aggresso-matte-black-1-16042021-014730.jpg',
+                    'https://imagewebsite.astra-honda.com/uploads/product/colors/honda-racing-red-1-16042021-014733.jpg'
+                ], 
+                desc: 'Motor sport full fairing dengan fitur konektivitas canggih.' 
+            },
+            { 
+                id: 's-9', 
+                name: 'CBR150R ABS', 
+                category: 'Sport', 
+                price: 'Rp 42.925.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/ahm-cbr150r-matte-black-abs-515x504px-2-23102024-085905.png',
+                ], 
+                desc: 'Motor sport full fairing dengan fitur konektivitas canggih.' 
+            },
+            { 
+                id: 's-10', 
+                name: 'CBR150R ABS', 
+                category: 'Sport', 
+                price: 'Rp 43.650.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/ahm-cbr150r-tricolor-abs-515x504px-3-23102024-085855.png',
+                ], 
+                desc: 'Motor sport full fairing dengan fitur konektivitas canggih.' 
+            },
+            { 
+                id: 's-11', 
+                name: 'CBR150R STD', 
+                category: 'Sport', 
+                price: 'Rp 38.800.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/ahm-cbr150r-matte-black-abs-515x504px-2-23102024-085905.png',
+                ], 
+                desc: 'Motor sport full fairing dengan fitur konektivitas canggih.' 
+            },
+            { 
+                id: 's-12', 
+                name: 'CBR150R STD', 
+                category: 'Sport', 
+                price: 'Rp 39.500.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/ahm-cbr150r-red-racing-515x504px-1-23102024-070622.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/ahm-cbr150r-tricolor-abs-515x504px-3-23102024-085855.png',
+                ], 
+                desc: 'Motor sport full fairing dengan fitur konektivitas canggih.' 
+            },
+
+            // Contoh Kategori CUB (Bebek)
+            { 
+                id: 'c-1', 
+                name: 'REVO FIT', 
+                category: 'CUB', 
+                price: 'Rp 18.300.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/raving-red-2-24012022-110055.jpg',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/galaxy-blue-2-24012022-110058.jpg'
+                ], 
+                desc: 'Motor bebek legendaris yang handal dan irit bahan bakar.' 
+            },
+            { 
+                id: 'c-2', 
+                name: 'REVO X', 
+                category: 'CUB', 
+                price: 'Rp 20.025.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/attractive-red-2-24012022-110047.jpg',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/quantum-black-4-24012022-110051.jpg',
+                ], 
+                desc: 'Bebek sport dengan performa mesin tangguh dan agresif.' 
+            },
+            { 
+                id: 'c-3', 
+                name: 'SUPRA X 125 CW', 
+                category: 'CUB', 
+                price: 'Rp 22.650.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-1-2-04032022-102011.jpg',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/varian-2-2-04032022-102025.jpg',
+                ], 
+                desc: 'Bebek sport dengan performa mesin tangguh dan agresif.' 
+            },
+            { 
+                id: 'c-4', 
+                name: 'GTR150 SPORTY', 
+                category: 'CUB', 
+                price: 'Rp 27.575.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product/colors/sporty-spartan-red-1-16042021-015535.jpg',
+                    'https://imagewebsite.astra-honda.com/uploads/product/colors/sporty-gun-black-1-16042021-015551.jpg',
+                ], 
+                desc: 'Bebek sport dengan performa mesin tangguh dan agresif.' 
+            },
+            { 
+                id: 'c-5', 
+                name: 'GTR150 EXCLUSIVE', 
+                category: 'CUB', 
+                price: 'Rp 27.700.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product/colors/exclusive-matte-silver-1-16042021-015547.jpg',
+                    'https://imagewebsite.astra-honda.com/uploads/product/colors/exclusive-matte-red-1-16042021-015554.jpg',
+                ], 
+                desc: 'Bebek sport dengan performa mesin tangguh dan agresif.' 
+            },
+
+            // Contoh Kategori EV / Listrik
+            { 
+                id: 'ev-1', 
+                name: 'EM1 e:', 
+                category: 'EV', 
+                price: 'Rp 40.075.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/warna-em1-white-515x504-tr-3-21122023-045422.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/warna-em1-black-515x504-tr-3-21122023-045432.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/warna-em1-red-515x504-tr-3-21122023-045443.png',
+                ], 
+                desc: 'Motor listrik modern berkecepatan tinggi dengan jarak tempuh jauh.' 
+            },
+            { 
+                id: 'ev-2', 
+                name: 'EM1 e: PLUS', 
+                category: 'EV', 
+                price: 'Rp 40.575.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/warna-em1-silver-515x504-tr-21122023-045454.png',
+                ], 
+                desc: 'Motor listrik modern berkecepatan tinggi dengan jarak tempuh jauh.' 
+            },
+            { 
+                id: 'ev-3', 
+                name: 'ICON e:', 
+                category: 'EV', 
+                price: 'Rp 28.075.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/icon-e-515-x-504-01-1-2-09102024-113619.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/icon-e-515-x-504-02-1-2-09102024-113624.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/icon-e-515-x-504-03-1-2-09102024-113630.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/icon-e-515-x-504-04-1-2-09102024-113638.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/icon-e-515-x-504-05-1-2-09102024-113644.png',
+                ], 
+                desc: 'Motor listrik modern berkecepatan tinggi dengan jarak tempuh jauh.' 
+            },
+            { 
+                id: 'ev-4', 
+                name: 'CUV e:', 
+                category: 'EV', 
+                price: 'Rp 54.550.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/515-x-504-01-1-3-09102024-125739.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/515-x-504-02-1-3-09102024-125729.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/515-x-504-03-1-3-09102024-125720.png',
+                ], 
+                desc: 'Motor listrik modern berkecepatan tinggi dengan jarak tempuh jauh.' 
+            },
+            { 
+                id: 'ev-5', 
+                name: 'CUV e: ROADSYNC DUO', 
+                category: 'EV', 
+                price: 'Rp 59.750.000', 
+                images: [
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/515-x-504-04-1-3-09102024-125828.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/515-x-504-05-1-3-09102024-125817.png',
+                    'https://imagewebsite.astra-honda.com/uploads/product-draft/colors/515-x-504-06-1-3-09102024-125810.png',
+                ], 
+                desc: 'Kendaraan masa depan bebas emisi dengan baterai bertenaga.' 
+            }
+            
+        ];
+
+        let activeCategory = 'All';
+        let searchQuery = '';
+
+        const productGrid = document.getElementById('productGrid');
+        const emptyState = document.getElementById('emptyState');
+        const searchInput = document.getElementById('searchInput');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+
+        function renderProducts() {
+            const filtered = rawProducts.filter(p => {
+                const matchesCategory = activeCategory === 'All' || p.category === activeCategory;
+                const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            productGrid.innerHTML = '';
+
+            if (filtered.length === 0) {
+                emptyState.classList.remove('hidden');
+                return;
+            } else {
+                emptyState.classList.add('hidden');
+            }
+
+            filtered.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition flex flex-col justify-between relative';
+                
+                let badgeHTML = product.badge ? `<span class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded-md uppercase z-10">${product.badge}</span>` : '';
+
+                // Membuat tombol thumbnail kecil jika gambar lebih dari 1
+                let thumbnailsHTML = '';
+                if (product.images && product.images.length > 1) {
+                    thumbnailsHTML = `
+                        <div class="flex gap-2 px-5 pt-3">
+                            ${product.images.map((imgUrl, index) => `
+                                <img src="${imgUrl}" alt="Thumbnail ${index + 1}" 
+                                     onclick="this.closest('.bg-white').querySelector('.main-product-img').src='${imgUrl}'"
+                                     class="w-10 h-10 object-cover rounded-md cursor-pointer border-2 border-gray-200 hover:border-red-600 transition">
+                            `).join('')}
+                        </div>
+                    `;
+                }
+
+                // Ambil gambar pertama sebagai default gambar utama
+                const defaultImage = product.images && product.images.length > 0 ? product.images[0] : '';
+
+                card.innerHTML = `
+                    <div>
+                        ${badgeHTML}
+                        <!-- Gambar Utama -->
+                        <div class="h-48 overflow-hidden bg-gray-50 flex items-center justify-center p-4">
+                            <img src="${defaultImage}" alt="${product.name}" class="main-product-img max-h-full object-contain transition duration-300">
+                        </div>
+                        
+                        <!-- Pilihan Thumbnail Gambar Kecil -->
+                        ${thumbnailsHTML}
+
+                        <div class="p-5">
+                            <span class="text-xs font-bold text-gray-400 uppercase tracking-wide">${product.category}</span>
+                            <h3 class="text-lg font-bold text-gray-900 mt-1 mb-1">${product.name}</h3>
+                            <p class="text-xs text-gray-500 mb-3">${product.desc || ''}</p>
+                            <div class="text-red-600 font-extrabold text-base pt-3 border-t border-dashed border-gray-200">${product.price}</div>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5">
+                        <a href="https://wa.me/6287717988654?text=Halo%20Karya%20Perdana%20Indramayu,%20saya%20tertarik%20pesan%20unit%20${encodeURIComponent(product.name)}" target="_blank" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2.5 rounded-lg transition text-sm flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-base"></i> Pesan via WhatsApp
+                        </a>
+                    </div>
+                `;
+                productGrid.appendChild(card);
+            });
+        }
+
+        // Event Listener Tombol Filter Kategori
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active', 'bg-red-600', 'text-white'));
+                filterButtons.forEach(btn => btn.classList.add('bg-white', 'text-gray-600', 'border', 'border-gray-200'));
+                
+                button.classList.add('active', 'bg-red-600', 'text-white');
+                button.classList.remove('bg-white', 'text-gray-600', 'border', 'border-gray-200');
+
+                activeCategory = button.getAttribute('data-category');
+                renderProducts();
+            });
+        });
+
+        // Event Listener Kolom Pencarian
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            renderProducts();
+        });
+
+        // Mobile Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Logika Kalkulator Simulasi Kredit
+        function formatRupiah(angka) {
+            return 'Rp ' + angka.toLocaleString('id-ID');
+        }
+
+        function hitungKredit() {
+            const selectMotor = document.getElementById('selectMotor');
+            const hargaOTR = parseInt(selectMotor.value);
+            const namaMotor = selectMotor.options[selectMotor.selectedIndex].text.split(' (')[0];
+            
+            const dpPersen = parseFloat(document.getElementById('selectDP').value);
+            const tenor = parseInt(document.getElementById('selectTenor').value);
+
+            const jumlahDP = hargaOTR * dpPersen;
+            const sisaHutang = hargaOTR - jumlahDP;
+            
+            const bungaPerBulan = 0.015; // 1.5% flat per bulan
+            const totalBunga = sisaHutang * bungaPerBulan * (tenor / 12);
+            const totalHutang = sisaHutang + totalBunga;
+            const cicilanPerBulan = totalHutang / tenor;
+
+            document.getElementById('resHarga').innerText = formatRupiah(hargaOTR);
+            document.getElementById('resDP').innerText = formatRupiah(Math.round(jumlahDP));
+            document.getElementById('resTenor').innerText = tenor + ' Bulan';
+            document.getElementById('resCicilan').innerText = formatRupiah(Math.round(cicilanPerBulan)) + ' /bln';
+
+            const pesanWA = `Halo Karya Perdana Indramayu, saya ingin mengajukan simulasi kredit untuk unit *${namaMotor}* dengan DP ${dpPersen * 100}% dan tenor ${tenor} bulan. Mohon informasi lanjutannya.`;
+            document.getElementById('btnAjukanKredit').href = `https://wa.me/6287717988654?text=${encodeURIComponent(pesanWA)}`;
+        }
+
+        // Inisialisasi awal saat halaman dibuka
+        window.onload = function() {
+            renderProducts();
+            hitungKredit();
+        };
+    </script>
+</body>
+</html>
